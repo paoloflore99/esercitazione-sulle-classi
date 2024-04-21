@@ -1,22 +1,34 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Reflection.PortableExecutable;
+using System.Security.Cryptography.X509Certificates;
 
 namespace classi
 {
-    public class auto()
+    public class Auto()
     {
         public int peso;
+        public int anni;
+        //void funzioneclasse();
+
+        //so mettendo dentro una classe unaltra classe 
+        public Libro miolibro;
 
 
 
-        public class miaauto()
+        public class Miaauto()
         {
-
+            
         }
     }
 
-    class ruota()
+    public class Libro()
     {
         public string marca;
+
+
+        public class Miolibro
+        {
+
+        }
     }
 
 
@@ -27,9 +39,25 @@ namespace classi
     {
         static void Main(string[] args)
         {
-           auto miaauto = new auto ();
+          
+            void funzioneclasse()
+            {
 
-           
+            }
+
+            //creazione istanza
+            Auto miaauto = new Auto();
+            Libro miolibro = new Libro();
+
+            //asegniazione valore
+            miaauto.peso = 10000;
+            miaauto.anni = 1998;
+            miolibro.marca = "mondadori";
+
+            //lettura 
+            Console.WriteLine(miaauto.peso);
+            Console.WriteLine(miaauto.anni);
+
         }
     }
 }
