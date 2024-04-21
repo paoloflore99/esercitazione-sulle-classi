@@ -42,8 +42,43 @@ namespace classi
         }
     }
 
+    public class Provauno()
+    {
+        public string esempio1;
+        public Provadue provadue;
+
+        
+
+        public class provauno()
+        {
+
+        }
+
+        public void Metodo()
+        {
+            Console.WriteLine($"ciao mondo {esempio1}");
+        }
+    }
+
+    public class Provadue()
+    {
+        public int esempio2;
+        public static int provastatica;
 
 
+
+    }
+
+   
+    public class Costruttore()
+    {
+        public int nombre;
+
+        public Costruttore(int nombre)
+        {
+            this.nombre = nombre;
+        }
+    }
 
 
     internal class Program
@@ -57,10 +92,16 @@ namespace classi
             }
 
             //creazione istanza
+            Costruttore ogetto = new Costruttore(2);
             Auto miaauto = new Auto();
             Libro miolibro = new Libro();
             miaauto.miolibro = new Libro();
             Gomma esca = new Gomma();
+            Provauno provauno = new Provauno();
+            provauno.provadue = new Provadue();
+            Provadue.provastatica++;
+
+
 
             //asegniazione valore
 
@@ -69,15 +110,22 @@ namespace classi
             miaauto.anni = 1998;
             miaauto.miolibro.marca = "mondadori";
             miolibro.marca = "mondadori";
-            
 
-           
+
+            provauno.esempio1 = "vediamo se va";
+            provauno.
+            provadue = new Provadue();
+            provauno.Metodo();
+
+
+
 
             //lettura 
             Console.WriteLine(miaauto.peso);
             Console.WriteLine(miaauto.anni);
             Console.WriteLine(miaauto.miolibro);
             Console.WriteLine(esca.numero);
+            Console.WriteLine(provauno.esempio1);
             //cosi stampo 
             Console.WriteLine(miaauto);
         }
